@@ -6,7 +6,6 @@ let three = document.getElementById('task-three')
 let threeValue = three.innerText
 
 let input = document.getElementById('input')
-let inputValue = input.value
 
 let taskOne = false
 let taskTwo = false
