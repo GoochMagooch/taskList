@@ -5,13 +5,15 @@ let twoValue = two.innerText
 let three = document.getElementById('task-three')
 let threeValue = three.innerText
 
+let addTask = document.getElementById('enter')
+let clearTasks = document.getElementById('clear')
 let input = document.getElementById('input')
 
 let taskOne = false
 let taskTwo = false
 let taskThree = false
 
-function addTask() {
+addTask.addEventListener('click', function() {
     if (!taskOne) {
         one.textContent += ' ' + input.value
         taskOne = true
@@ -28,9 +30,9 @@ function addTask() {
         alert("No more tasks may be added!")
         input.value = ''
     }
-}
+})
 
-function clearTasks() {
+clearTasks.addEventListener('click', function() {
     one.textContent = oneValue
     two.textContent = twoValue
     three.textContent = threeValue
@@ -38,4 +40,4 @@ function clearTasks() {
     taskOne = false
     taskTwo = false
     taskThree = false
-}
+})
